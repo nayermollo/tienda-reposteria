@@ -1,0 +1,386 @@
+<html lang="es">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1" name="viewport"/>
+  <title>
+   Tienda de Repostería Dulce Tentación
+  </title>
+  <script src="https://cdn.tailwindcss.com">
+  </script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&amp;family=Roboto:wght@400;700&amp;display=swap" rel="stylesheet"/>
+  <style>
+   body {
+      font-family: 'Roboto', sans-serif;
+    }
+    .logo-font {
+      font-family: 'Pacifico', cursive;
+    }
+  </style>
+ </head>
+ <body class="bg-gradient-to-b from-pink-50 to-pink-100 min-h-screen flex flex-col">
+  <!-- Header -->
+  <header class="bg-pink-200 shadow-md">
+   <div class="container mx-auto px-4 py-4 flex items-center justify-between">
+    <div class="flex items-center space-x-3">
+     <img alt="Logo de la tienda con un pastel de cumpleaños decorado con glaseado rosa y una vela encendida" class="w-12 h-12" height="48" src="https://storage.googleapis.com/a1aa/image/fe0bae24-2b7c-48fd-5d3d-fb187cd56daf.jpg" width="48"/>
+     <h1 class="text-3xl text-pink-700 logo-font select-none">
+      Dulce Tentación
+     </h1>
+    </div>
+    <nav class="hidden md:flex space-x-8 text-pink-800 font-semibold">
+     <a class="hover:text-pink-600 transition" href="#productos">
+      Productos
+     </a>
+     <a class="hover:text-pink-600 transition" href="#nosotros">
+      Nosotros
+     </a>
+     <a class="hover:text-pink-600 transition" href="#contacto">
+      Contacto
+     </a>
+     <a class="hover:text-pink-600 transition relative" href="#carrito">
+      <i class="fas fa-shopping-cart text-xl">
+      </i>
+      <span class="absolute -top-2 -right-3 bg-pink-600 text-white rounded-full text-xs w-5 h-5 flex items-center justify-center" id="cart-count">
+       0
+      </span>
+     </a>
+    </nav>
+    <button aria-label="Abrir menú" class="md:hidden text-pink-700 focus:outline-none focus:ring-2 focus:ring-pink-400" id="menu-btn">
+     <i class="fas fa-bars text-2xl">
+     </i>
+    </button>
+   </div>
+   <nav class="md:hidden bg-pink-100 px-4 py-4 space-y-3 hidden text-pink-700 font-semibold" id="mobile-menu">
+    <a class="block hover:text-pink-600 transition" href="#productos">
+     Productos
+    </a>
+    <a class="block hover:text-pink-600 transition" href="#nosotros">
+     Nosotros
+    </a>
+    <a class="block hover:text-pink-600 transition" href="#contacto">
+     Contacto
+    </a>
+    <a class="block hover:text-pink-600 transition relative" href="#carrito">
+     <i class="fas fa-shopping-cart text-xl">
+     </i>
+     <span class="absolute -top-2 -right-3 bg-pink-600 text-white rounded-full text-xs w-5 h-5 flex items-center justify-center" id="cart-count-mobile">
+      0
+     </span>
+    </a>
+   </nav>
+  </header>
+  <!-- Hero -->
+  <section class="bg-pink-50 py-16 px-6 flex flex-col items-center text-center max-w-7xl mx-auto">
+   <h2 class="text-4xl md:text-5xl font-bold text-pink-700 mb-4">
+    Bienvenido a Dulce Tentación
+   </h2>
+   <p class="text-pink-600 max-w-3xl mb-8 text-lg md:text-xl">
+    Descubre los mejores postres artesanales, pasteles personalizados y dulces que harán tus momentos inolvidables.
+   </p>
+   <a class="bg-pink-600 hover:bg-pink-700 text-white font-semibold px-8 py-3 rounded-full shadow-lg transition" href="#productos">
+    Ver Productos
+   </a>
+  </section>
+  <!-- Productos -->
+  <section class="max-w-7xl mx-auto px-6 py-12" id="productos">
+   <h3 class="text-3xl font-bold text-pink-700 mb-8 text-center">
+    Nuestros Productos
+   </h3>
+   <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+    <article class="bg-white rounded-lg shadow-md overflow-hidden flex flex-col">
+     <img alt="Pastel de chocolate con fresas frescas y glaseado de chocolate brillante decorado con hojas de menta" class="w-full h-48 object-cover" height="300" src="https://storage.googleapis.com/a1aa/image/4a75d531-f636-4ca6-2327-e39f3a46bd8e.jpg" width="400"/>
+     <div class="p-4 flex flex-col flex-grow">
+      <h4 class="text-xl font-semibold text-pink-800 mb-2">
+       Pastel de Chocolate
+      </h4>
+      <p class="text-pink-600 flex-grow">
+       Delicioso pastel de chocolate con fresas frescas y glaseado cremoso.
+      </p>
+      <div class="mt-4 flex items-center justify-between">
+       <span class="text-pink-700 font-bold text-lg">
+        $25.00
+       </span>
+       <button class="bg-pink-600 hover:bg-pink-700 text-white px-4 py-2 rounded transition" onclick="addToCart('Pastel de Chocolate', 25.0)">
+        Añadir
+       </button>
+      </div>
+     </div>
+    </article>
+    <article class="bg-white rounded-lg shadow-md overflow-hidden flex flex-col">
+     <img alt="Cupcakes de vainilla con glaseado de fresa rosa y chispas de colores sobre plato blanco" class="w-full h-48 object-cover" height="300" src="https://storage.googleapis.com/a1aa/image/52f1fc0b-da85-4661-521a-392aa72fcef3.jpg" width="400"/>
+     <div class="p-4 flex flex-col flex-grow">
+      <h4 class="text-xl font-semibold text-pink-800 mb-2">
+       Cupcakes de Vainilla
+      </h4>
+      <p class="text-pink-600 flex-grow">
+       Suaves cupcakes de vainilla con glaseado de fresa y chispas de colores.
+      </p>
+      <div class="mt-4 flex items-center justify-between">
+       <span class="text-pink-700 font-bold text-lg">
+        $3.50
+       </span>
+       <button class="bg-pink-600 hover:bg-pink-700 text-white px-4 py-2 rounded transition" onclick="addToCart('Cupcake de Vainilla', 3.5)">
+        Añadir
+       </button>
+      </div>
+     </div>
+    </article>
+    <article class="bg-white rounded-lg shadow-md overflow-hidden flex flex-col">
+     <img alt="Galletas decoradas con glaseado de colores pastel en formas de flores y corazones sobre mesa de madera clara" class="w-full h-48 object-cover" height="300" src="https://storage.googleapis.com/a1aa/image/40c4061f-8452-4848-f183-8967e02ea1cc.jpg" width="400"/>
+     <div class="p-4 flex flex-col flex-grow">
+      <h4 class="text-xl font-semibold text-pink-800 mb-2">
+       Galletas Decoradas
+      </h4>
+      <p class="text-pink-600 flex-grow">
+       Galletas artesanales decoradas con glaseado de colores y diseños personalizados.
+      </p>
+      <div class="mt-4 flex items-center justify-between">
+       <span class="text-pink-700 font-bold text-lg">
+        $1.50
+       </span>
+       <button class="bg-pink-600 hover:bg-pink-700 text-white px-4 py-2 rounded transition" onclick="addToCart('Galleta Decorada', 1.5)">
+        Añadir
+       </button>
+      </div>
+     </div>
+    </article>
+    <article class="bg-white rounded-lg shadow-md overflow-hidden flex flex-col">
+     <img alt="Macarons de colores pastel variados apilados en plato blanco sobre fondo rosa claro" class="w-full h-48 object-cover" height="300" src="https://storage.googleapis.com/a1aa/image/338a6e1f-f80f-44a9-a148-e917c23fa4d0.jpg" width="400"/>
+     <div class="p-4 flex flex-col flex-grow">
+      <h4 class="text-xl font-semibold text-pink-800 mb-2">
+       Macarons
+      </h4>
+      <p class="text-pink-600 flex-grow">
+       Delicados macarons franceses en sabores variados y colores pastel.
+      </p>
+      <div class="mt-4 flex items-center justify-between">
+       <span class="text-pink-700 font-bold text-lg">
+        $2.00
+       </span>
+       <button class="bg-pink-600 hover:bg-pink-700 text-white px-4 py-2 rounded transition" onclick="addToCart('Macaron', 2.0)">
+        Añadir
+       </button>
+      </div>
+     </div>
+    </article>
+    <article class="bg-white rounded-lg shadow-md overflow-hidden flex flex-col">
+     <img alt="Cheesecake cremoso con salsa de frutos rojos y hojas de menta decorativas en plato blanco" class="w-full h-48 object-cover" height="300" src="https://storage.googleapis.com/a1aa/image/e4bc098c-3479-49d5-3355-74645a21b27b.jpg" width="400"/>
+     <div class="p-4 flex flex-col flex-grow">
+      <h4 class="text-xl font-semibold text-pink-800 mb-2">
+       Cheesecake
+      </h4>
+      <p class="text-pink-600 flex-grow">
+       Cheesecake cremoso con base de galleta y salsa de frutos rojos frescos.
+      </p>
+      <div class="mt-4 flex items-center justify-between">
+       <span class="text-pink-700 font-bold text-lg">
+        $18.00
+       </span>
+       <button class="bg-pink-600 hover:bg-pink-700 text-white px-4 py-2 rounded transition" onclick="addToCart('Cheesecake', 18.0)">
+        Añadir
+       </button>
+      </div>
+     </div>
+    </article>
+    <article class="bg-white rounded-lg shadow-md overflow-hidden flex flex-col">
+     <img alt="Brownies de chocolate con nueces troceadas y textura húmeda en plato rústico" class="w-full h-48 object-cover" height="300" src="https://storage.googleapis.com/a1aa/image/b81da538-309d-4d63-ceee-a23297692fb6.jpg" width="400"/>
+     <div class="p-4 flex flex-col flex-grow">
+      <h4 class="text-xl font-semibold text-pink-800 mb-2">
+       Brownies
+      </h4>
+      <p class="text-pink-600 flex-grow">
+       Brownies de chocolate intenso con nueces troceadas y textura húmeda.
+      </p>
+      <div class="mt-4 flex items-center justify-between">
+       <span class="text-pink-700 font-bold text-lg">
+        $2.50
+       </span>
+       <button class="bg-pink-600 hover:bg-pink-700 text-white px-4 py-2 rounded transition" onclick="addToCart('Brownie', 2.5)">
+        Añadir
+       </button>
+      </div>
+     </div>
+    </article>
+    <article class="bg-white rounded-lg shadow-md overflow-hidden flex flex-col">
+     <img alt="Tarta de limón merengada con merengue dorado y base crujiente en plato blanco" class="w-full h-48 object-cover" height="300" src="https://storage.googleapis.com/a1aa/image/75cdab01-04b4-4df4-e3a5-031cf18c5196.jpg" width="400"/>
+     <div class="p-4 flex flex-col flex-grow">
+      <h4 class="text-xl font-semibold text-pink-800 mb-2">
+       Tarta de Limón
+      </h4>
+      <p class="text-pink-600 flex-grow">
+       Tarta de limón con merengue dorado y base crujiente, sabor refrescante.
+      </p>
+      <div class="mt-4 flex items-center justify-between">
+       <span class="text-pink-700 font-bold text-lg">
+        $20.00
+       </span>
+       <button class="bg-pink-600 hover:bg-pink-700 text-white px-4 py-2 rounded transition" onclick="addToCart('Tarta de Limón', 20.0)">
+        Añadir
+       </button>
+      </div>
+     </div>
+    </article>
+   </div>
+  </section>
+  <!-- Nosotros -->
+  <section class="bg-pink-100 py-12 px-6 max-w-7xl mx-auto rounded-lg shadow-md mb-12" id="nosotros">
+   <h3 class="text-3xl font-bold text-pink-700 mb-6 text-center">
+    Sobre Nosotros
+   </h3>
+   <div class="flex flex-col md:flex-row items-center md:items-start md:space-x-10">
+    <img alt="Repostera artesanal sonriente preparando pasteles en una cocina luminosa con utensilios y ingredientes frescos" class="rounded-lg shadow-lg w-full md:w-1/2 mb-6 md:mb-0 object-cover" height="300" src="https://storage.googleapis.com/a1aa/image/ff3177da-a82c-48fe-15f9-b6ed2d74820a.jpg" width="400"/>
+    <div class="text-pink-700 md:w-1/2 text-lg leading-relaxed">
+     <p>
+      En
+      <span class="font-semibold">
+       Dulce Tentación
+      </span>
+      nos apasiona crear postres artesanales con ingredientes de la mejor calidad. Cada pastel, cupcake y dulce es elaborado con amor y dedicación para que disfrutes momentos inolvidables.
+     </p>
+     <p class="mt-4">
+      Nuestra misión es endulzar tu vida con sabores auténticos y presentaciones hermosas. Ya sea para una celebración especial o un antojo diario, estamos aquí para hacer tus deseos realidad.
+     </p>
+    </div>
+   </div>
+  </section>
+  <!-- Contacto -->
+  <section class="max-w-7xl mx-auto px-6 py-12 bg-pink-50 rounded-lg shadow-md mb-12" id="contacto">
+   <h3 class="text-3xl font-bold text-pink-700 mb-6 text-center">
+    Contáctanos
+   </h3>
+   <form class="max-w-3xl mx-auto space-y-6" id="contact-form" onsubmit="event.preventDefault(); alert('Gracias por contactarnos, te responderemos pronto!'); this.reset();">
+    <div>
+     <label class="block text-pink-700 font-semibold mb-2" for="nombre">
+      Nombre
+     </label>
+     <input class="w-full border border-pink-300 rounded px-4 py-2 focus:outline-none focus:ring-2 focus:ring-pink-400" id="nombre" name="nombre" placeholder="Tu nombre" required="" type="text"/>
+    </div>
+    <div>
+     <label class="block text-pink-700 font-semibold mb-2" for="email">
+      Correo Electrónico
+     </label>
+     <input class="w-full border border-pink-300 rounded px-4 py-2 focus:outline-none focus:ring-2 focus:ring-pink-400" id="email" name="email" placeholder="tu@email.com" required="" type="email"/>
+    </div>
+    <div>
+     <label class="block text-pink-700 font-semibold mb-2" for="mensaje">
+      Mensaje
+     </label>
+     <textarea class="w-full border border-pink-300 rounded px-4 py-2 focus:outline-none focus:ring-2 focus:ring-pink-400" id="mensaje" name="mensaje" placeholder="Escribe tu mensaje aquí" required="" rows="4"></textarea>
+    </div>
+    <button class="bg-pink-600 hover:bg-pink-700 text-white font-semibold px-6 py-3 rounded-full w-full md:w-auto transition" type="submit">
+     Enviar Mensaje
+    </button>
+   </form>
+  </section>
+  <!-- Carrito -->
+  <section class="max-w-7xl mx-auto px-6 py-12 bg-pink-100 rounded-lg shadow-md mb-12" id="carrito">
+   <h3 class="text-3xl font-bold text-pink-700 mb-6 text-center">
+    Tu Carrito
+   </h3>
+   <div class="space-y-4 max-w-3xl mx-auto" id="cart-items">
+    <p class="text-pink-600 text-center">
+     No hay productos en el carrito.
+    </p>
+   </div>
+   <div class="max-w-3xl mx-auto mt-8 flex flex-col md:flex-row md:justify-between items-center hidden" id="cart-summary">
+    <span class="text-pink-700 font-bold text-xl">
+     Total: $
+     <span id="cart-total">
+      0.00
+     </span>
+    </span>
+    <button class="mt-4 md:mt-0 bg-pink-600 hover:bg-pink-700 text-white font-semibold px-6 py-3 rounded-full transition" id="checkout-btn" onclick="checkout()">
+     Finalizar Compra
+    </button>
+   </div>
+  </section>
+  <!-- Footer -->
+  <footer class="bg-pink-200 py-6 text-center text-pink-700 font-semibold">
+   © 2024 Dulce Tentación. Todos los derechos reservados.
+  </footer>
+  <script>
+   const menuBtn = document.getElementById('menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const cartCount = document.getElementById('cart-count');
+    const cartCountMobile = document.getElementById('cart-count-mobile');
+    const cartItemsContainer = document.getElementById('cart-items');
+    const cartTotalEl = document.getElementById('cart-total');
+    const cartSummary = document.getElementById('cart-summary');
+
+    let cart = [];
+
+    menuBtn.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+    });
+
+    function addToCart(name, price) {
+      const existingItem = cart.find(item => item.name === name);
+      if (existingItem) {
+        existingItem.quantity++;
+      } else {
+        cart.push({ name, price, quantity: 1 });
+      }
+      updateCartUI();
+    }
+
+    function updateCartUI() {
+      // Update count badges
+      const totalQuantity = cart.reduce((acc, item) => acc + item.quantity, 0);
+      cartCount.textContent = totalQuantity;
+      cartCountMobile.textContent = totalQuantity;
+
+      // Update cart items list
+      if (cart.length === 0) {
+        cartItemsContainer.innerHTML = '<p class="text-pink-600 text-center">No hay productos en el carrito.</p>';
+        cartSummary.classList.add('hidden');
+        return;
+      }
+
+      cartSummary.classList.remove('hidden');
+
+      cartItemsContainer.innerHTML = '';
+      cart.forEach((item, index) => {
+        const itemEl = document.createElement('div');
+        itemEl.className = 'flex justify-between items-center bg-white rounded p-3 shadow';
+
+        itemEl.innerHTML = `
+          <div class="flex flex-col">
+            <span class="font-semibold text-pink-800">${item.name}</span>
+            <span class="text-pink-600 text-sm">Cantidad: ${item.quantity}</span>
+          </div>
+          <div class="flex items-center space-x-4">
+            <span class="font-bold text-pink-700">$${(item.price * item.quantity).toFixed(2)}</span>
+            <button aria-label="Eliminar producto" class="text-pink-600 hover:text-pink-800 focus:outline-none" onclick="removeFromCart(${index})">
+              <i class="fas fa-trash-alt"></i>
+            </button>
+          </div>
+        `;
+        cartItemsContainer.appendChild(itemEl);
+      });
+
+      // Update total
+      const totalPrice = cart.reduce((acc, item) => acc + item.price * item.quantity, 0);
+      cartTotalEl.textContent = totalPrice.toFixed(2);
+    }
+
+    function removeFromCart(index) {
+      cart.splice(index, 1);
+      updateCartUI();
+    }
+
+    function checkout() {
+      if (cart.length === 0) {
+        alert('Tu carrito está vacío.');
+        return;
+      }
+      alert(`Gracias por tu compra! Total a pagar: $${cart.reduce((acc, item) => acc + item.price * item.quantity, 0).toFixed(2)}`);
+      cart = [];
+      updateCartUI();
+    }
+
+    // Inicializar carrito vacío
+    updateCartUI();
+  </script>
+ </body>
+</html>
